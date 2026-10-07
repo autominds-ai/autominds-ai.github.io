@@ -8,12 +8,12 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   
   :root {
-    --purple: #6366F1;
-    --purple-dark: #4F46E5;
-    --orange: #F97316;
-    --dark: #0A0E1A;
+    --purple: #2F80FF;
+    --purple-dark: #0B3FA8;
+    --orange: #3D8BFF;
+    --dark: #0A1226;
     --dark2: #0D1B3E;
-    --light-purple: #A5B4FC;
+    --light-purple: #9CC4FF;
     --slate: #94A3B8;
     --white: #ffffff;
     --green: #10B981;
@@ -31,8 +31,8 @@
     position: fixed;
     inset: 0;
     background-image: 
-      linear-gradient(rgba(99,102,241,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(99,102,241,0.05) 1px, transparent 1px);
+      linear-gradient(rgba(47,128,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(47,128,255,0.05) 1px, transparent 1px);
     background-size: 60px 60px;
     pointer-events: none;
     z-index: 0;
@@ -48,9 +48,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(10,14,26,0.85);
+    background: rgba(10,18,38,0.85);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(99,102,241,0.15);
+    border-bottom: 1px solid rgba(47,128,255,0.15);
   }
 
   .nav-brand {
@@ -91,7 +91,7 @@
   .orb1 {
     position: absolute;
     width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(47,128,255,0.2) 0%, transparent 70%);
     top: -100px; left: -150px;
     border-radius: 50%;
     pointer-events: none;
@@ -99,7 +99,7 @@
   .orb2 {
     position: absolute;
     width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(249,115,22,0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(61,139,255,0.15) 0%, transparent 70%);
     bottom: -50px; right: -100px;
     border-radius: 50%;
     pointer-events: none;
@@ -239,7 +239,7 @@
 
   .guide-card {
     background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(99,102,241,0.2);
+    border: 1px solid rgba(47,128,255,0.2);
     border-radius: 24px;
     padding: 48px;
     display: grid;
@@ -316,8 +316,8 @@
 
   /* Guide visual */
   .guide-visual {
-    background: linear-gradient(135deg, var(--dark2), #1a0533);
-    border: 1px solid rgba(99,102,241,0.3);
+    background: linear-gradient(135deg, var(--dark2), #0B2A66);
+    border: 1px solid rgba(47,128,255,0.3);
     border-radius: 20px;
     padding: 32px;
     position: relative;
@@ -420,13 +420,13 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(249,115,22,0.12);
-    border: 1px solid rgba(249,115,22,0.35);
+    background: rgba(61,139,255,0.12);
+    border: 1px solid rgba(61,139,255,0.35);
     border-radius: 30px;
     padding: 8px 18px;
     margin-bottom: 20px;
     font-size: 13px;
-    color: #FED7AA;
+    color: #CFE3FF;
     font-weight: 600;
   }
 
@@ -451,7 +451,7 @@
 
   .form-card {
     background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(99,102,241,0.2);
+    border: 1px solid rgba(47,128,255,0.2);
     border-radius: 24px;
     padding: 40px;
     backdrop-filter: blur(10px);
@@ -483,7 +483,7 @@
   input, select {
     width: 100%;
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(99,102,241,0.2);
+    border: 1px solid rgba(47,128,255,0.2);
     border-radius: 10px;
     padding: 14px 16px;
     font-size: 15px;
@@ -497,7 +497,7 @@
 
   input:focus, select:focus {
     border-color: var(--purple);
-    background: rgba(99,102,241,0.08);
+    background: rgba(47,128,255,0.08);
   }
 
   select option {
@@ -507,7 +507,7 @@
 
   .submit-btn {
     width: 100%;
-    background: linear-gradient(135deg, var(--orange), #EA580C);
+    background: linear-gradient(135deg, var(--orange), #0B3FA8);
     color: white;
     border: none;
     border-radius: 12px;
@@ -518,12 +518,12 @@
     transition: transform 0.2s, box-shadow 0.2s;
     margin-top: 8px;
     letter-spacing: 0.3px;
-    box-shadow: 0 8px 30px rgba(249,115,22,0.35);
+    box-shadow: 0 8px 30px rgba(61,139,255,0.35);
   }
 
   .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(249,115,22,0.45);
+    box-shadow: 0 12px 40px rgba(61,139,255,0.45);
   }
 
   .submit-btn:active { transform: translateY(0); }
@@ -645,14 +645,14 @@
     bottom: 24px;
     right: 24px;
     z-index: 99;
-    background: linear-gradient(135deg, var(--orange), #EA580C);
+    background: linear-gradient(135deg, var(--orange), #0B3FA8);
     color: white;
     padding: 14px 24px;
     border-radius: 50px;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 8px 30px rgba(249,115,22,0.4);
+    box-shadow: 0 8px 30px rgba(61,139,255,0.4);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -914,7 +914,7 @@ margin: 60px auto;
 padding: 40px;
 text-align: center;
 background: rgba(255,255,255,0.04);
-border: 1px solid rgba(99,102,241,0.2);
+border: 1px solid rgba(47,128,255,0.2);
 border-radius: 24px;
 ">
 
@@ -930,7 +930,7 @@ Book a FREE 30-Minute Automation Audit and I'll show you exactly where your busi
 target="_blank"
 style="
 display:inline-block;
-background:linear-gradient(135deg,#F97316,#EA580C);
+background:linear-gradient(135deg,#3D8BFF,#0B3FA8);
 color:white;
 padding:18px 32px;
 border-radius:12px;
