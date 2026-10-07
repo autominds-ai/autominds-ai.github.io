@@ -3,25 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AutoMinds AI — Samuel Isaac helps Nigerian small businesses automate their operations using AI. Stop doing things manually. Save time, capture leads, and grow." />
-  <meta name="keywords" content="AI Automation, Data Scientist, Machine Learning, RLHF, Make.com, Workflow Automation, Nigeria, Samuel Isaac" />
-  <meta property="og:title" content="Samuel Isaac | AutoMinds AI — AI Automation Specialist" />
-  <meta property="og:description" content="helps Nigerian small businesses automate their operations using AI. Stop doing things manually. Save time, capture leads, and grow." />
-  <title>Samuel Isaac | AutoMinds AI — AI Automation Specialist</title>
+  <meta name="description" content="AutoMinds AI Services helps Nigerian businesses automate lead capture, follow-ups, customer support and content with AI. Stop doing things manually. Save time and win more customers." />
+  <meta name="keywords" content="AI Automation, AutoMinds AI Services, Lead Capture Automation, WhatsApp Automation, Make.com, Workflow Automation, Lagos, Nigeria" />
+  <meta property="og:title" content="AutoMinds AI Services | AI Automation for Nigerian Businesses" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://autominds-ai.github.io/" />
+  <meta property="og:image" content="https://autominds-ai.github.io/autominds-logo.png" />
+  <meta property="og:description" content="We help Nigerian businesses automate lead capture, follow-ups, customer support and content with AI. Stop doing things manually." />
+  <title>AutoMinds AI Services | AI Automation for Nigerian Businesses</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     /* ── TOKENS ──────────────────────────────────────────── */
     :root {
-      --bg:          #0D1117;
+      --bg:          #0A1226;
       --bg-card:     rgba(255,255,255,0.04);
       --bg-card-h:   rgba(255,255,255,0.08);
       --border:      rgba(255,255,255,0.08);
-      --border-h:    rgba(0,217,255,0.4);
-      --cyan:        #00D9FF;
-      --cyan-dim:    rgba(0,217,255,0.12);
-      --cyan-glow:   rgba(0,217,255,0.25);
+      --border-h:    rgba(47,128,255,0.4);
+      --cyan:        #2F80FF;
+      --cyan-dim:    rgba(47,128,255,0.12);
+      --cyan-glow:   rgba(47,128,255,0.25);
       --text:        #E6EDF3;
       --text-muted:  #8B949E;
       --text-faint:  #484F58;
@@ -36,10 +41,10 @@
       --bg-card:     rgba(0,0,0,0.03);
       --bg-card-h:   rgba(0,0,0,0.06);
       --border:      rgba(0,0,0,0.08);
-      --border-h:    rgba(0,150,180,0.5);
-      --cyan:        #0088AA;
-      --cyan-dim:    rgba(0,136,170,0.10);
-      --cyan-glow:   rgba(0,136,170,0.20);
+      --border-h:    rgba(26,95,208,0.5);
+      --cyan:        #1A5FD0;
+      --cyan-dim:    rgba(26,95,208,0.10);
+      --cyan-glow:   rgba(26,95,208,0.20);
       --text:        #1C2128;
       --text-muted:  #57606A;
       --text-faint:  #B0BAC4;
@@ -72,8 +77,8 @@
     }
     @keyframes pulse-ring {
       0%   { transform: scale(0.9); box-shadow: 0 0 0 0 var(--cyan-glow); }
-      70%  { transform: scale(1);   box-shadow: 0 0 0 14px rgba(0,217,255,0); }
-      100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0,217,255,0); }
+      70%  { transform: scale(1);   box-shadow: 0 0 0 14px rgba(47,128,255,0); }
+      100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(47,128,255,0); }
     }
     @keyframes shimmer {
       0%   { background-position: -400px 0; }
@@ -96,7 +101,7 @@
       height: var(--nav-h);
       display: flex; align-items: center;
       padding: 0 clamp(1.25rem, 5vw, 3rem);
-      background: rgba(13,17,23,0.85);
+      background: rgba(10,18,38,0.85);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--border);
       transition: background var(--transition), border-color var(--transition);
@@ -111,6 +116,8 @@
       font-weight: 700; font-size: 1.15rem;
       letter-spacing: -0.02em;
     }
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.6rem; }
+    .nav-logo-img { width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0; }
     .nav-logo span { color: var(--cyan); }
     .nav-links {
       display: flex; gap: 2rem; align-items: center;
@@ -198,14 +205,14 @@
     #hero {
       min-height: 100vh;
       display: flex; align-items: center;
-      padding-top: var(--nav-h);
+      padding-top: 1.5rem;
       position: relative; overflow: hidden;
     }
     .hero-glow {
       position: absolute; top: 15%; left: 50%;
       transform: translateX(-50%);
       width: 600px; height: 600px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(0,217,255,0.07) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(47,128,255,0.07) 0%, transparent 70%);
       pointer-events: none;
     }
     .hero-inner {
@@ -218,7 +225,7 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.82rem; color: var(--cyan);
       background: var(--cyan-dim);
-      border: 1px solid rgba(0,217,255,0.2);
+      border: 1px solid rgba(47,128,255,0.2);
       padding: 0.35rem 0.85rem; border-radius: 100px;
       margin-bottom: 1.5rem;
     }
@@ -250,7 +257,7 @@
     .btn-primary {
       display: inline-flex; align-items: center; gap: 0.5rem;
       padding: 0.85rem 1.75rem;
-      background: var(--cyan); color: #0D1117;
+      background: var(--cyan); color: #0A1226;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700; font-size: 0.95rem;
       border-radius: var(--radius);
@@ -343,7 +350,7 @@
     .thumb-whatsapp   { background: linear-gradient(135deg, #1A0D1A, #2D0D2D); }
     .project-thumb::after {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(to bottom, transparent 40%, rgba(13,17,23,0.6));
+      background: linear-gradient(to bottom, transparent 40%, rgba(10,18,38,0.6));
     }
     .project-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
     .project-category {
@@ -367,7 +374,7 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.72rem; padding: 0.25rem 0.6rem;
       background: var(--cyan-dim);
-      border: 1px solid rgba(0,217,255,0.15);
+      border: 1px solid rgba(47,128,255,0.15);
       border-radius: 6px; color: var(--cyan);
     }
     .project-link {
@@ -379,7 +386,7 @@
 
     /* ── ABOUT ───────────────────────────────────────────── */
     #about {
-      background: linear-gradient(180deg, transparent, rgba(0,217,255,0.03) 50%, transparent);
+      background: linear-gradient(180deg, transparent, rgba(47,128,255,0.03) 50%, transparent);
     }
     .about-grid {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -437,7 +444,7 @@
     .skill-chip:hover { border-color: var(--border-h); color: var(--cyan); }
     .skill-chip.core {
       background: var(--cyan-dim);
-      border-color: rgba(0,217,255,0.25);
+      border-color: rgba(47,128,255,0.25);
       color: var(--cyan);
     }
     .certs-row {
@@ -503,7 +510,7 @@
       content: ''; position: absolute;
       top: -50%; right: -10%;
       width: 400px; height: 400px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(0,217,255,0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(47,128,255,0.06) 0%, transparent 70%);
       pointer-events: none;
     }
     .contact-left .section-title { margin-bottom: 1rem; }
@@ -547,7 +554,7 @@
     }
     .form-submit {
       padding: 0.85rem 1.75rem;
-      background: var(--cyan); color: #0D1117;
+      background: var(--cyan); color: #0A1226;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700; font-size: 0.95rem;
       border-radius: var(--radius);
@@ -614,7 +621,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">Samuel<span>.</span></a>
+      <a href="#hero" class="nav-logo"><img src="autominds-logo.png" alt="AutoMinds AI logo" class="nav-logo-img" onerror="this.style.display='none'" /><b style="font-weight:700">AutoMinds<span> AI</span></b></a>
       <ul class="nav-links">
         <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
@@ -623,14 +630,14 @@
       </ul>
       <div class="nav-right">
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀️</button>
-        <a href="mailto:samuelerikan45@gmail.com" class="nav-cta">Hire Me</a>
+        <a href="mailto:autominds.ai@zohomail.com" class="nav-cta">Get Started</a>
         <button class="hamburger" id="hamburger" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
-  <div id="free-guide-banner" style="position:relative !important;z-index:9999 !important;background:linear-gradient(90deg,#F97316,#6366F1) !important;padding:14px 20px !important;text-align:center !important;font-family:'Segoe UI',sans-serif !important;width:100% !important;display:block !important;">
+  <div id="free-guide-banner" style="position:relative !important;z-index:1 !important;margin-top:68px !important;background:linear-gradient(90deg,#2F80FF,#0B3FA8) !important;padding:14px 20px !important;text-align:center !important;font-family:'Segoe UI',sans-serif !important;width:100% !important;display:block !important;">
   <a href="free-consultation.html" style="color:#ffffff !important;text-decoration:none !important;font-size:14px !important;font-weight:700 !important;display:inline-flex !important;align-items:center !important;gap:8px !important;line-height:normal !important;">
     🎁 FREE GUIDE: "Stop Doing It Manually!" — 5 Tasks You Should Be Automating Right Now
     <span style="background:rgba(255,255,255,0.25) !important;padding:4px 12px !important;border-radius:20px !important;font-size:12px !important;margin-left:8px !important;color:#ffffff !important;">Get It Free →</span>
@@ -643,7 +650,7 @@
     <a href="#about"    onclick="closeMobileMenu()">About</a>
     <a href="#services" onclick="closeMobileMenu()">Services</a>
     <a href="#contact"  onclick="closeMobileMenu()">Contact</a>
-    <a href="mailto:samuelerikan45@gmail.com" class="nav-cta" style="align-self:flex-start;">Hire Me</a>
+    <a href="mailto:autominds.ai@zohomail.com" class="nav-cta" style="align-self:flex-start;">Get Started</a>
   </div>
 
   <!-- HERO -->
@@ -652,7 +659,7 @@
     <div class="container">
       <div class="hero-inner">
         <div class="hero-content">
-          <div class="hero-eyebrow fade-up delay-1">Available for freelance work</div>
+          <div class="hero-eyebrow fade-up delay-1">Now taking new clients</div>
           <h1 class="hero-headline fade-up delay-2">
             Helping <span class="accent">Business Owners</span>
             <span class="line2">To Stop Doing Things</span>
@@ -663,10 +670,10 @@
           </div>
           <div class="hero-ctas fade-up delay-4">
             <a href="#work" class="btn-primary">
-              View My Work
+              See Our Work
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="mailto:samuelerikan45@gmail.com" class="btn-secondary">
+            <a href="mailto:autominds.ai@zohomail.com" class="btn-secondary">
               Get In Touch
             </a>
           </div>
@@ -802,11 +809,11 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-bio reveal">
-          <div class="section-label">// My Story</div>
+          <div class="section-label">// Meet the Founder</div>
           <h2 class="section-title">From Classroom to<br>Cutting-Edge AI</h2>
           <p>My journey started in front of a <strong>chalkboard</strong>, teaching Mathematics and Physics to hundreds of students across primary and secondary schools in Nigeria. I learned early that the hardest skill isn't knowing the answer — it's <em class="highlight">making complexity simple.</em></p>
           <p>That same mindset carried me into <strong>telecoms</strong>, where I spent years as a Project Supervisor and NOC Engineer at Uppercrest and Tyllium — managing Huawei infrastructure, hitting <strong>99.5% network uptime</strong>, and delivering Power BI dashboards that drove real decisions.</p>
-          <p>Then AI changed everything. I joined <strong>Awarri Technologies</strong> as a Machine Learning & Data Annotation Specialist — applying RLHF, labeling multi-modal datasets, and contributing to models that align with human values. Today I combine that technical depth with <em class="highlight">practical AI automation</em> to help businesses work smarter.</p>
+          <p>Then AI changed everything. I joined <strong>Awarri Technologies</strong> as a Machine Learning & Data Annotation Specialist — applying RLHF, labeling multi-modal datasets, and contributing to models that align with human values. Today I run <strong>AutoMinds AI Services</strong>, combining that technical depth with <em class="highlight">practical AI automation</em> to help businesses work smarter.</p>
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-year">2023 – Present</div>
@@ -884,41 +891,41 @@
     <div class="container">
       <div class="services-intro reveal">
         <div>
-          <div class="section-label">// What I Offer</div>
-          <h2 class="section-title">Services Built<br>Around Results</h2>
+          <div class="section-label">// What We Offer</div>
+          <h2 class="section-title">Automation Built<br>Around Results</h2>
         </div>
-        <p class="section-sub">Whether you need clean training data, automated workflows, or a complete AI strategy — I deliver practical solutions that save time, reduce errors, and drive growth.</p>
+        <p class="section-sub">Whether you want to stop missing leads, answer customers faster, or free up your week, we build practical AI automation that saves time, reduces errors and helps your business grow.</p>
       </div>
       <div class="services-grid">
         <div class="service-card reveal">
-          <div class="service-icon">🤖</div>
-          <div class="service-name">AI Workflow Automation</div>
-          <p class="service-desc">Design and build end-to-end automated workflows using Make.com, APIs, and webhooks that eliminate repetitive tasks and run 24/7.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">🏷️</div>
-          <div class="service-name">Data Annotation & Labeling</div>
-          <p class="service-desc">Professional text, image, and audio annotation for ML training — with quality checks and structured output ready for your model.</p>
+          <div class="service-icon">🎯</div>
+          <div class="service-name">Lead Capture &amp; Follow-Up Automation</div>
+          <p class="service-desc">Capture every enquiry from your website, forms or WhatsApp, save it to a spreadsheet, and follow up automatically on schedule, even at 2am.</p>
         </div>
         <div class="service-card reveal">
           <div class="service-icon">💬</div>
-          <div class="service-name">Chatbot Integration</div>
-          <p class="service-desc">Build and deploy intelligent chatbots on Telegram, WhatsApp, or your website using ChatGPT API integration and automation.</p>
+          <div class="service-name">WhatsApp &amp; AI Customer Support</div>
+          <p class="service-desc">An AI assistant trained on your business that answers questions about prices, services and bookings 24/7, and alerts you when a customer is ready to buy.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🤖</div>
+          <div class="service-name">AI Workflow Automation</div>
+          <p class="service-desc">End-to-end automated workflows built with Make.com, APIs and webhooks that remove repetitive tasks and run around the clock.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">📱</div>
+          <div class="service-name">Social Media &amp; Email Automation</div>
+          <p class="service-desc">Stay visible without hours of work: automated content, scheduled posts, and professional emails written in your own tone.</p>
         </div>
         <div class="service-card reveal">
           <div class="service-icon">📊</div>
-          <div class="service-name">Data Analysis & Reporting</div>
-          <p class="service-desc">Transform raw data into clear Power BI dashboards and actionable insights that support faster, smarter business decisions.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">🎯</div>
-          <div class="service-name">Lead Generation Systems</div>
-          <p class="service-desc">Automate your lead capture, qualification, and nurturing pipeline — so your business generates and follows up on leads while you sleep.</p>
+          <div class="service-name">Data Analysis &amp; AI Data Services</div>
+          <p class="service-desc">Clear Power BI dashboards for faster decisions, plus professional data annotation and labeling for teams training AI models.</p>
         </div>
         <div class="service-card reveal">
           <div class="service-icon">🎓</div>
-          <div class="service-name">AI Consulting & Training</div>
-          <p class="service-desc">Practical guidance on implementing AI tools in your business — from strategy to execution — for teams and solo founders alike.</p>
+          <div class="service-name">AI Consulting &amp; Training</div>
+          <p class="service-desc">Practical guidance on using AI tools in your business, from strategy to setup, for teams and solo founders alike.</p>
         </div>
       </div>
     </div>
@@ -931,11 +938,11 @@
         <div class="contact-left">
           <div class="section-label">// Let's Work Together</div>
           <h2 class="section-title">Ready to Automate<br>Your Business?</h2>
-          <p class="contact-desc">Whether you have a specific project in mind or just want to explore what AI automation can do for you — I'd love to talk. Responses within 24 hours.</p>
+          <p class="contact-desc">Whether you have a specific project in mind or just want to explore what AI automation can do for your business — we'd love to talk. Responses within 24 hours.</p>
           <div class="contact-links">
-            <a href="mailto:samuelerikan45@gmail.com" class="contact-link-item">
+            <a href="mailto:autominds.ai@zohomail.com" class="contact-link-item">
               <span class="contact-link-icon">📧</span>
-              samuelerikan45@gmail.com
+              autominds.ai@zohomail.com
             </a>
             <a href="https://wa.me/2349030405860" target="_blank" rel="noopener" class="contact-link-item">
               <span class="contact-link-icon">📱</span>
@@ -963,7 +970,7 @@
             </div>
             <div class="form-group">
               <label for="service">Service Needed</label>
-              <input type="text" id="service" placeholder="e.g. AI Automation, Data Annotation..." />
+              <input type="text" id="service" placeholder="e.g. Lead capture, WhatsApp support..." />
             </div>
             <div class="form-group">
               <label for="message">Message</label>
@@ -979,7 +986,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-      <p class="footer-copy">© 2026 <span>Samuel Isaac | AutoMinds AI</span> · Built with purpose from Lagos, Nigeria 🇳🇬 to the World</p>
+      <p class="footer-copy">© 2026 <span>AutoMinds AI Services</span> · Built with purpose from Lagos, Nigeria 🇳🇬 to the World</p>
       <div class="social-links">
         <a href="https://linkedin.com/in/samuel-isaac1" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
@@ -1020,11 +1027,11 @@
 
     // ── TYPEWRITER ───────────────────────────────────────
     const phrases = [
-      'AI Automation Specialist',
-      'Data Scientist & ML Engineer',
-      'Workflow Automation Expert',
-      'RLHF & Data Annotation Pro',
-      'AI Content Creator'
+      'Lead Capture Automation',
+      'WhatsApp Follow-Up Systems',
+      'AI Customer Support Assistants',
+      'Social Media & Email Automation',
+      'AI Workflow Automation'
     ];
     let pi = 0, ci = 0, deleting = false;
     const el = document.getElementById('typewriter');
@@ -1056,7 +1063,7 @@
       const email = document.getElementById('email').value;
       const service = document.getElementById('service').value;
       const message = document.getElementById('message').value;
-      const mailto = `mailto:eriksammy79@gmail.com?subject=Project Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nService: ${service}\n\nMessage:\n${message}`)}`;
+      const mailto = `mailto:autominds.ai@zohomail.com?subject=Project Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nService: ${service}\n\nMessage:\n${message}`)}`;
       btn.textContent = 'Opening Email...';
       btn.style.opacity = '0.7';
       window.location.href = mailto;
