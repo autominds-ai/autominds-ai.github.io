@@ -630,7 +630,7 @@
       </ul>
       <div class="nav-right">
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀️</button>
-        <a href="mailto:autominds.ai@zohomail.com" class="nav-cta">Get Started</a>
+        <a href="free-consultation.html" class="nav-cta">Get Started</a>
         <button class="hamburger" id="hamburger" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
@@ -650,7 +650,7 @@
     <a href="#about"    onclick="closeMobileMenu()">About</a>
     <a href="#services" onclick="closeMobileMenu()">Services</a>
     <a href="#contact"  onclick="closeMobileMenu()">Contact</a>
-    <a href="mailto:autominds.ai@zohomail.com" class="nav-cta" style="align-self:flex-start;">Get Started</a>
+    <a href="free-consultation.html" class="nav-cta" style="align-self:flex-start;">Get Started</a>
   </div>
 
   <!-- HERO -->
@@ -673,7 +673,7 @@
               See Our Work
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="mailto:autominds.ai@zohomail.com" class="btn-secondary">
+            <a href="https://wa.me/2349030405860?text=Hi%20AutoMinds%20AI%2C%20I%27d%20like%20to%20automate%20my%20business" target="_blank" rel="noopener" class="btn-secondary">
               Get In Touch
             </a>
           </div>
@@ -976,7 +976,7 @@
               <label for="message">Message</label>
               <textarea id="message" rows="4" placeholder="Tell me about your project..." required></textarea>
             </div>
-            <button type="submit" class="form-submit" id="submitBtn">Send Message →</button>
+            <button type="submit" class="form-submit" id="submitBtn">Send via WhatsApp →</button>
           </form>
         </div>
       </div>
@@ -1063,11 +1063,11 @@
       const email = document.getElementById('email').value;
       const service = document.getElementById('service').value;
       const message = document.getElementById('message').value;
-      const mailto = `mailto:autominds.ai@zohomail.com?subject=Project Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nService: ${service}\n\nMessage:\n${message}`)}`;
-      btn.textContent = 'Opening Email...';
+      const text = `Hi AutoMinds AI, my name is ${name}.\nEmail: ${email}\nService needed: ${service || 'Not sure yet'}\n\n${message}`;
+      btn.textContent = 'Opening WhatsApp...';
       btn.style.opacity = '0.7';
-      window.location.href = mailto;
-      setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.opacity = '1'; }, 2000);
+      window.open('https://wa.me/2349030405860?text=' + encodeURIComponent(text), '_blank');
+      setTimeout(() => { btn.textContent = 'Send via WhatsApp →'; btn.style.opacity = '1'; }, 2000);
     }
   </script>
 </body>
