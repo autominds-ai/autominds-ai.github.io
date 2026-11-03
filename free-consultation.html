@@ -982,6 +982,31 @@ font-size:18px;
   🎁 Get Free Guide
 </a>
 <script>
+// Read where the visitor came from (the sticker)
+var leadSource = 'direct';
+try {
+  var params = new URLSearchParams(window.location.search);
+  var fromLink = params.get('src');
+  if (fromLink) {
+    localStorage.setItem('lead_src', fromLink);
+    leadSource = fromLink;
+  } else {
+    leadSource = localStorage.getItem('lead_src') || 'direct';
+  }
+  leadSource = leadSource.replace(/[^a-zA-Z0-9_-]/g, '').slice(0, 40) || 'direct';
+
+  // Optional: pre-select the business type from the link (?biz=real-estate)
+  var bizFromLink = params.get('biz');
+  var bizSelect = document.getElementById('business');
+  if (bizFromLink && bizSelect) {
+    for (var i = 0; i < bizSelect.options.length; i++) {
+      if (bizSelect.options[i].value === bizFromLink) {
+        bizSelect.value = bizFromLink;
+      }
+    }
+  }
+} catch (e) {}
+
 function handleSubmit() {
   const name = document.getElementById('name').value.trim();
   const phone = document.getElementById('phone').value.trim();
@@ -1007,6 +1032,8 @@ function handleSubmit() {
     email,
     business,
     challenge,
+    source: leadSource,
+    page: window.location.pathname,
     timestamp: new Date().toISOString()
   };
 
