@@ -1006,7 +1006,19 @@ try {
     }
   }
 } catch (e) {}
-
+function cleanPhone(raw) {
+  var d = String(raw).replace(/[^0-9]/g, '');
+  if (d.indexOf('2340') === 0) {
+    d = '234' + d.slice(4);
+  } else if (d.indexOf('234') === 0) {
+    // already in the right format
+  } else if (d.charAt(0) === '0') {
+    d = '234' + d.slice(1);
+  } else {
+    d = '234' + d;
+  }
+  return d;
+}
 function handleSubmit() {
   const name = document.getElementById('name').value.trim();
   const phone = document.getElementById('phone').value.trim();
@@ -1029,6 +1041,7 @@ function handleSubmit() {
   const leadData = {
     name,
     phone,
+    phone_clean: cleanPhone(phone),
     email,
     business,
     challenge,
